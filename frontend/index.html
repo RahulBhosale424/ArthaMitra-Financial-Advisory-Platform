@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Financial Advisory MVP</title>
+    <!-- No client-side payment script needed here — Stripe Checkout is a
+         hosted, redirect-based flow: the backend creates a Checkout Session
+         and hands back a URL, and the frontend just does
+         window.location.href = checkoutUrl. Contrast this with Razorpay's
+         approach, which uses an embedded JS widget requiring a script tag
+         like the one this replaced. -->
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

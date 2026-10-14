@@ -1,0 +1,75 @@
+:root {
+  --color-bg: #f7f8fa;
+  --color-surface: #ffffff;
+  --color-primary: #0f4c5c;
+  --color-accent: #d4a017;
+  --color-text: #1a1a1a;
+  --color-muted: #6b7280;
+  --color-border: #e5e7eb;
+  --color-danger: #b3261e;
+  --color-success: #1a7f37;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.app-shell { max-width: 900px; margin: 0 auto; padding: 0 16px 48px; }
+
+.navbar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 16px 0; border-bottom: 1px solid var(--color-border); margin-bottom: 24px;
+}
+.navbar a { color: var(--color-primary); text-decoration: none; margin-right: 16px; font-weight: 500; }
+.navbar .brand { font-weight: 700; font-size: 1.1rem; color: var(--color-primary); }
+
+.card {
+  background: var(--color-surface); border: 1px solid var(--color-border);
+  border-radius: 10px; padding: 20px; margin-bottom: 16px;
+}
+
+.btn {
+  background: var(--color-primary); color: white; border: none; border-radius: 6px;
+  padding: 10px 18px; font-size: 0.95rem; cursor: pointer;
+}
+.btn:hover { opacity: 0.9; }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn.secondary { background: transparent; color: var(--color-primary); border: 1px solid var(--color-primary); }
+.btn.danger { background: var(--color-danger); }
+
+input, select, textarea {
+  width: 100%; padding: 9px 10px; border: 1px solid var(--color-border);
+  border-radius: 6px; font-size: 0.95rem; margin-bottom: 12px;
+}
+label { font-size: 0.85rem; color: var(--color-muted); display: block; margin-bottom: 4px; }
+
+.badge {
+  display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 0.78rem; font-weight: 600;
+}
+.badge.pending { background: #fff3cd; color: #856404; }
+.badge.confirmed { background: #d1e7ff; color: #084298; }
+.badge.completed { background: #d4edda; color: var(--color-success); }
+.badge.cancelled { background: #f8d7da; color: var(--color-danger); }
+
+.chat-window { display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; min-height: 300px; }
+.chat-bubble { max-width: 75%; padding: 10px 14px; border-radius: 14px; line-height: 1.4; }
+.chat-bubble.bot { background: var(--color-surface); border: 1px solid var(--color-border); align-self: flex-start; }
+.chat-bubble.user { background: var(--color-primary); color: white; align-self: flex-end; }
+.chat-input-row { display: flex; gap: 8px; }
+.chat-input-row input { margin-bottom: 0; }
+
+.score-ring {
+  width: 90px; height: 90px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem; font-weight: 700; color: white;
+}
+
+.error-text { color: var(--color-danger); font-size: 0.9rem; margin-bottom: 8px; }
+.muted { color: var(--color-muted); font-size: 0.9rem; }
+
+.expert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
